@@ -456,12 +456,12 @@ body{
         }
     }
 
-    .work_img{
+    .work_img.flex.flex-between{
         margin-top: 80px;
         margin-bottom: 0;
 
         @media (max-width: 993px) {
-            flex-direction: column !important;
+            flex-direction: column;
         }
 
         @media (max-width: 768px) {
@@ -505,11 +505,6 @@ body{
             }
         }
     }
-
-    .btn{
-        margin-top: 100px;
-        
-    }
 }
 
 .work_page{
@@ -518,10 +513,15 @@ body{
     flex-wrap: nowrap;
     max-width: 980px;
     width: 100%;
-    margin: 100px auto 0;
+    margin: 160px auto 0;
 
     @media (max-width: 768px) {
         width: 90%;
+        margin-top: 100px;
+    }
+
+    @media (max-width: 560px) {
+        width: 100%;
     }
 
     a{
@@ -532,6 +532,100 @@ body{
 
         @media (max-width: 768px) {
             font-size: 1.6rem;
+        }
+
+        @media (max-width: 560px) {
+            font-size: 1.4rem;
+        }
+
+        @media (hover:hover) {
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .back_work{
+        a{
+            position: relative;
+            padding-left: 34px;
+
+            @media (max-width: 768px) {
+                padding-left: 24px;
+            }
+
+            &:before{
+                content: "";
+                position: absolute;
+                background: url(/common/img/icon_dots.svg) no-repeat;
+                background-size: contain;
+                width: 18px;
+                height: 18px;
+                left: 0;
+                top: 11px;
+
+                @media (max-width: 768px) {
+                    width: 14px;
+                    height: 14px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+
+    .back_work.last{
+        a{
+            &:before{
+                content: none;
+            }
+
+            &:after{
+                content: "";
+                position: absolute;
+                border-top: 2px solid $color_main;
+                border-right: 2px solid $color_main;
+                width: 10px;
+                height: 10px;
+                top: 13px;
+
+                @media (max-width: 768px) {
+                    width: 8px;
+                    height: 8px;
+                    top: 10px;
+                }
+
+                @media (max-width: 560px) {
+                    top: 8px;
+                }
+            }
+        }
+
+        &.next a{
+            padding-left: 0;
+            padding-right: 24px;
+
+            @media (max-width: 768px) {
+                padding-right: 16px;
+            }
+
+            &:after{
+                transform: rotate(45deg);
+                right: 0;
+            }
+        }
+        
+
+        &.prev a{
+            padding-left: 24px;
+
+            @media (max-width: 768px) {
+                padding-left: 16px;
+            }
+
+            &:after{
+                transform: rotate(-135deg);
+                left: 0;
+            }
         }
     }
 }

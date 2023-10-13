@@ -261,8 +261,10 @@ header .logo:after {
   bottom: 0;
   margin: auto 0;
 }
-header .logo:hover {
-  opacity: 0.6;
+@media (hover: hover) {
+  header .logo:hover {
+    opacity: 0.7;
+  }
 }
 header .hamburger {
   position: relative;
@@ -881,8 +883,10 @@ footer .logo {
   transition: 0.4s all ease;
   font-family: "Open Sans", sans-serif;
 }
-footer .logo:hover {
-  opacity: 0.6;
+@media (hover: hover) {
+  footer .logo:hover {
+    opacity: 0.7;
+  }
 }
 footer p {
   font-size: 1.4rem;

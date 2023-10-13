@@ -125,21 +125,23 @@
                 <div class="prev">
                     <?php previous_post_link('%link', 'prev'); ?>
                 </div>
-                <?php else: ?>
-                    <!-- <a href="/">TOPに戻る</a> -->
                 <?php endif; ?>
 
-                <?php if (get_next_post()):?>
+                <?php if (!(get_next_post())):?>
+                <div class="back_work next last">
+                <?php elseif(!(get_previous_post())) : ?>
+                <div class="back_work prev last">
+                <?php else : ?>
+                <div class="back_work">
+                <?php endif; ?>
+                    <a href="/work/">作業一覧を見る</a>
+                </div>
+
+                <?php if(get_next_post()):?>
                 <div class="next">
                     <?php next_post_link('%link', 'next'); ?>
                 </div>
-                <?php else: ?>
-                    <!-- <a href="/">TOPに戻る</a> -->
                 <?php endif; ?>
-            </div>
-
-            <div class="btn">
-                <a href="/work/">一覧に戻る</a>
             </div>
         </div>
        </section>
