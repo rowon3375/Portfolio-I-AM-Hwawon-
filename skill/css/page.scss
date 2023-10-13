@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+$color_main: #000000;
+$color_sub: #333333;
+$color_white: #fff;
+
+$font_main: 'Noto Sans JP', sans-serif;;
+$font_en: 'Open Sans', sans-serif;
+$font_roboto: 'Roboto', sans-serif;
+
+/********************************************************
+//
+//                     skill
+//
+********************************************************/
+#skill_detail{
+    padding-top: 0;
+
+    .detail_title{
+        margin-bottom: 60px;
+        
+        >h2{
+            text-align: left;
+
+            &:after{
+                width: 70%;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+
+                @media (max-width: 768px){
+                    width: 65%;
+                }
+            }
+        }
+
+        >p{
+            line-height: 2;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            
+            @media (max-width: 768px) {
+                font-size: 1.6rem;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    //check sheet
+    .check_sheet{
+        margin-bottom: 60px;
+        border-bottom: 2px solid $color_main;
+        padding-bottom: 20px;
+
+        @media (max-width: 768px) {
+            padding: 12px;
+            border-top: 2px solid $color_main;
+        }
+
+        >p{
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 24px;
+            font-size: 1.8;
+
+            @media (max-width: 768px) {
+                font-size: 1.6rem;
+            }
+        }
+
+        >.flex{
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            @media (max-width: 556px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+
+        dl{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        dt, dd{
+            font-size: 1.5rem;
+
+            @media (max-width: 768px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    //check sheet
+    .check_sheet{
+        margin-bottom: 60px;
+        border-bottom: 2px solid $color_main;
+        padding-bottom: 20px;
+
+        @media (max-width: 768px) {
+            padding: 12px;
+            border-top: 2px solid $color_main;
+        }
+
+        >p{
+            font-weight: bold;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 12px;
+        }
+
+        >.flex{
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            @media (max-width: 556px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+
+        dl{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        dt, dd{
+            font-size: 1.5rem;
+
+            @media (max-width: 768px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    //skill_detail
+    .skill_detail{
+        align-items: flex-start;
+
+        @media (max-width: 768px) {
+            gap: 30px;
+        }
+
+        .skill_list{
+            width: calc((100% - 80px) / 2);
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
+            &.back_end{
+                width: 100%;
+            }
+        }
+
+        .skill_detail_title{
+            font-size: clamp(2.4rem, 4vw, 3rem);
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        .skill_content{
+            position: relative;
+            margin-bottom: 30px;
+
+            .skill_score{
+                margin-bottom: 5px;
+                flex-direction: row;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    align-items: flex-start;
+                }
+
+                >p{
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    display: inline-block;
+                }
+
+                >span{
+                    font-size: 1.4rem;
+                    display: inline-block;
+                }
+            }
+
+            .progress{
+                height: 20px;
+                border-radius: 20px;
+                border: 2px solid $color_main;
+            }
+
+            .progress-bar{
+                width: 0;
+                border-radius: 20px;
+                transition: width 3s ease;
+                height: 100%;
+                background: $color_main;
+            }
+        }
+
+        //back-end
+        .back_end_sheet{
+            width: calc((100% - 80px) / 2);
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        &:last-child{
+            margin-top: 40px;
+
+            @media (max-width: 768px) {
+                margin-top: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,208 @@
+/********************************************************
+//
+//                     skill
+//
+********************************************************/
+#skill_detail {
+  padding-top: 0;
+}
+#skill_detail .detail_title {
+  margin-bottom: 60px;
+}
+#skill_detail .detail_title > h2 {
+  text-align: left;
+}
+#skill_detail .detail_title > h2:after {
+  width: 70%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+@media (max-width: 768px) {
+  #skill_detail .detail_title > h2:after {
+    width: 65%;
+  }
+}
+#skill_detail .detail_title > p {
+  line-height: 2;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  #skill_detail .detail_title > p {
+    font-size: 1.6rem;
+  }
+}
+#skill_detail .detail_title > p:last-child {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+}
+#skill_detail .check_sheet {
+  margin-bottom: 60px;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  #skill_detail .check_sheet {
+    padding: 12px;
+    border-top: 2px solid #000000;
+  }
+}
+#skill_detail .check_sheet > p {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+  font-size: 1.8;
+}
+@media (max-width: 768px) {
+  #skill_detail .check_sheet > p {
+    font-size: 1.6rem;
+  }
+}
+#skill_detail .check_sheet > .flex {
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 556px) {
+  #skill_detail .check_sheet > .flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+#skill_detail .check_sheet dl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#skill_detail .check_sheet dt, #skill_detail .check_sheet dd {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  #skill_detail .check_sheet dt, #skill_detail .check_sheet dd {
+    font-size: 1.4rem;
+  }
+}
+#skill_detail .check_sheet {
+  margin-bottom: 60px;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  #skill_detail .check_sheet {
+    padding: 12px;
+    border-top: 2px solid #000000;
+  }
+}
+#skill_detail .check_sheet > p {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+#skill_detail .check_sheet > .flex {
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 556px) {
+  #skill_detail .check_sheet > .flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+#skill_detail .check_sheet dl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#skill_detail .check_sheet dt, #skill_detail .check_sheet dd {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  #skill_detail .check_sheet dt, #skill_detail .check_sheet dd {
+    font-size: 1.4rem;
+  }
+}
+#skill_detail .skill_detail {
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  #skill_detail .skill_detail {
+    gap: 30px;
+  }
+}
+#skill_detail .skill_detail .skill_list {
+  width: calc((100% - 80px) / 2);
+}
+@media (max-width: 768px) {
+  #skill_detail .skill_detail .skill_list {
+    width: 100%;
+  }
+}
+#skill_detail .skill_detail .skill_list.back_end {
+  width: 100%;
+}
+#skill_detail .skill_detail .skill_detail_title {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+#skill_detail .skill_detail .skill_content {
+  position: relative;
+  margin-bottom: 30px;
+}
+#skill_detail .skill_detail .skill_content .skill_score {
+  margin-bottom: 5px;
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  #skill_detail .skill_detail .skill_content .skill_score {
+    align-items: flex-start;
+  }
+}
+#skill_detail .skill_detail .skill_content .skill_score > p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: inline-block;
+}
+#skill_detail .skill_detail .skill_content .skill_score > span {
+  font-size: 1.4rem;
+  display: inline-block;
+}
+#skill_detail .skill_detail .skill_content .progress {
+  height: 20px;
+  border-radius: 20px;
+  border: 2px solid #000000;
+}
+#skill_detail .skill_detail .skill_content .progress-bar {
+  width: 0;
+  border-radius: 20px;
+  transition: width 3s ease;
+  height: 100%;
+  background: #000000;
+}
+#skill_detail .skill_detail .back_end_sheet {
+  width: calc((100% - 80px) / 2);
+}
+@media (max-width: 768px) {
+  #skill_detail .skill_detail .back_end_sheet {
+    width: 100%;
+  }
+}
+#skill_detail .skill_detail:last-child {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  #skill_detail .skill_detail:last-child {
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=page.css.map */

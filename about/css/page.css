@@ -1,0 +1,127 @@
+/********************************************************
+//
+//                     about
+//
+********************************************************/
+#about_detail {
+  padding-top: 0;
+}
+#about_detail ul.flex {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  #about_detail ul.flex {
+    margin-bottom: 30px;
+    gap: 12px;
+  }
+}
+#about_detail ul.flex li {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  padding-left: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+@media (max-width: 768px) {
+  #about_detail ul.flex li {
+    font-size: 1.6rem;
+  }
+}
+#about_detail ul.flex li:before {
+  content: "#";
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: bold;
+  left: 0;
+  top: 2px;
+}
+@media (max-width: 768px) {
+  #about_detail ul.flex li:before {
+    font-size: 1.4rem;
+  }
+}
+#about_detail .intro {
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  #about_detail .intro {
+    margin-bottom: 60px;
+  }
+}
+#about_detail .intro > h3 {
+  font-size: clamp(2.2rem, 2.8vw, 3rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+@media (max-width: 556px) {
+  #about_detail .intro > h3 {
+    letter-spacing: 0;
+  }
+}
+#about_detail .intro > p {
+  font-size: 1.8rem;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  #about_detail .intro > p {
+    font-size: 1.6rem;
+  }
+}
+#about_detail .intro > p:last-child {
+  margin-bottom: 0;
+}
+#about_detail .porfile {
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 556px) {
+  #about_detail .porfile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+#about_detail .porfile .porfile_content {
+  width: 50%;
+}
+@media (max-width: 556px) {
+  #about_detail .porfile .porfile_content {
+    width: 100%;
+  }
+}
+#about_detail .porfile h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  #about_detail .porfile h3 {
+    font-size: 2rem;
+  }
+}
+#about_detail .porfile dl {
+  margin-bottom: 30px;
+}
+#about_detail .porfile dl:last-child {
+  margin-bottom: 0;
+}
+#about_detail .porfile dt, #about_detail .porfile dd {
+  font-size: 1.8rem;
+}
+@media (max-width: 768px) {
+  #about_detail .porfile dt, #about_detail .porfile dd {
+    font-size: 1.6rem;
+  }
+}/*# sourceMappingURL=page.css.map */
