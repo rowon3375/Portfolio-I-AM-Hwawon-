@@ -895,4 +895,8 @@ footer p a {
 }
 footer p:last-child {
   margin-top: 10px;
+}
+footer p span {
+  display: inline-block;
+  margin-left: 4px;
 }/*# sourceMappingURL=common.css.map */

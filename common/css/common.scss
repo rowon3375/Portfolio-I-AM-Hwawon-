@@ -962,5 +962,10 @@ footer{
         &:last-child{
             margin-top: 10px;
         }
+
+        span{
+            display: inline-block;
+            margin-left: 4px;
+        }
     }
 }

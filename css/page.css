@@ -165,6 +165,9 @@ main {
 #skill .back_skill .one_box:last-child {
   margin-bottom: 0;
 }
+#skill .btn {
+  margin-left: 0;
+}
 
 #about {
   align-items: center;
@@ -238,6 +241,9 @@ main {
 }
 #about .about_content .about_text p:last-child {
   margin-bottom: 0;
+}
+#about .btn {
+  margin-left: 0;
 }
 
 #contact .sec_title {
