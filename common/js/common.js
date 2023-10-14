@@ -158,3 +158,25 @@ $(function () {
    $('ul .cat-item-all a').css({ 'background-color': '#000000'});
    $('ul .cat-item-all a').css({ 'color': '#fff'});
  }});
+
+
+
+ const listWrapperEl = document.querySelector('.work_content');
+ const listEl = document.querySelector('.work_list');
+ 
+ gsap.to(listEl, {
+   x: () => -(listEl.clientWidth - listWrapperEl.clientWidth),
+   ease: 'none',
+   scrollTrigger: {
+     trigger: '.side-scroll',
+     start: 'top top', // 要素の上端（top）が、ビューポートの上端（top）にきた時
+     end: () => `+=${listEl.clientWidth - listWrapperEl.clientWidth}`,
+     scrub: true,
+     pin: true,
+     anticipatePin: 1,
+     invalidateOnRefresh: true,
+   },
+ });
+
+
+
