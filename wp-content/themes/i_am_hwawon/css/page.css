@@ -463,19 +463,11 @@ body {
   align-items: center;
   flex-direction: row !important;
   flex-wrap: nowrap;
-  max-width: 980px;
-  width: 100%;
   margin: 160px auto 0;
 }
 @media (max-width: 768px) {
   .work_page {
-    width: 90%;
     margin-top: 100px;
-  }
-}
-@media (max-width: 560px) {
-  .work_page {
-    width: 100%;
   }
 }
 .work_page a {
