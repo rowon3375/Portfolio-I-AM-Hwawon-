@@ -33,7 +33,7 @@ $title = "About | I Am Hwawon";
                     そして、過去に頑張った自分に借りを作らないように今やることに全力を尽くすために頑張っています。</p>
 
                     <p>2022年からIT業界に興味を持ち勉強を始め、<span class="import_line_before">2023年からサイト制作の仕事</span>に取り組んでいます。<br>
-                    <span class="import_line_before">バックエンドとフロントエンド・デザインに関心</span>があり、現在は<span class="import_line_before">PHPとLaravelの勉強と一緒にPhotoShop・XD・Figmaの勉強</span>をやっています。</p>
+                    <span class="import_line_before">バックエンドとフロントエンド・デザインに関心</span>があり、現在はPHPとLaravelの勉強と一緒に<br class="pc-only1">PhotoShop・XD・Figmaの勉強をしています。</p>
 
                     <p>目標にしていることは一人でデザインからシステムまでやり遂げる<span class="import_color">オールラウンダー</span>になることを目指しています。</p>
                 </div>

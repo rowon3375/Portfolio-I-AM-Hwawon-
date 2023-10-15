@@ -168,6 +168,11 @@ main {
 #skill .btn {
   margin-left: 0;
 }
+@media (max-width: 768px) {
+  #skill .btn {
+    margin-left: auto;
+  }
+}
 
 #about {
   align-items: center;
@@ -244,6 +249,11 @@ main {
 }
 #about .btn {
   margin-left: 0;
+}
+@media (max-width: 768px) {
+  #about .btn {
+    margin-left: auto;
+  }
 }
 
 #contact .sec_title {

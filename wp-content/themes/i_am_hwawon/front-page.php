@@ -182,8 +182,8 @@ $title = "I Am Hwawon | Portfolio";
                         <span class="import_color">オールラウンダー</span>を目指して経験を積み重ねています！</p>
 
                         <p>未経験から初め、<span class="import_line_before">HTML・CSS・WordPress・PHP</span>など色な言語を携わっています。<br>
-                        現在は、デザインソフトウェアーの<span class="import_line_before">PhotoShop・XD・Figma</span>を勉強しています。<br>
-                        ウェブデザインからシステムまで幅広く関心を持っています。
+                        <span class="import_line_before">バックエンドとフロントエンド・デザインに関心</span>があり、<br class="pc-only1">
+                        現在は<span class="import_line_before">PHPとLaravelの勉強と一緒にPhotoShop・XD・Figmaの勉強</span>をしています。</p>
                         </p>
                     </div>
 
