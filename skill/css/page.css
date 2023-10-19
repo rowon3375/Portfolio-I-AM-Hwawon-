@@ -185,10 +185,10 @@
 }
 #skill_detail .skill_detail .skill_content .progress-bar {
   width: 0;
-  border-radius: 20px;
-  transition: width 3s ease;
-  height: 100%;
   background: #000000;
+  border-radius: 20px;
+  transition: 3s ease;
+  height: 100%;
 }
 #skill_detail .skill_detail .back_end_sheet {
   width: calc((100% - 80px) / 2);
@@ -205,4 +205,8 @@
   #skill_detail .skill_detail:last-child {
     margin-top: 30px;
   }
+}
+
+.fadeUp_show .progress-bar {
+  transition: width 3s ease;
 }/*# sourceMappingURL=page.css.map */

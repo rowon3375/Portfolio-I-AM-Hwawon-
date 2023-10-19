@@ -784,6 +784,7 @@ header .nav_menu.active .nav_list li:nth-child(6) {
   transition: 0.4s all ease;
   z-index: 1000;
   background: #fff;
+  mix-blend-mode: multiply;
 }
 @media (max-width: 768px) {
   .scroll_top {
@@ -840,14 +841,16 @@ header .nav_menu.active .nav_list li:nth-child(6) {
     top: 22px;
   }
 }
-.scroll_top:hover {
-  opacity: 1;
-}
-.scroll_top:hover a:before {
-  border-color: #fff;
-}
-.scroll_top:hover a:after {
-  transform: translate(-50%, -50%) scale(1.1, 1.1);
+@media (hover: hover) {
+  .scroll_top:hover {
+    opacity: 1;
+  }
+  .scroll_top:hover a:before {
+    border-color: #fff;
+  }
+  .scroll_top:hover a:after {
+    transform: translate(-50%, -50%) scale(1.1, 1.1);
+  }
 }
 
 .scroll_top.display {

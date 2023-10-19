@@ -13,6 +13,14 @@ $font_roboto: 'Roboto', sans-serif;
 //                     about
 //
 ********************************************************/
+.detail_title{
+    >h2:after{
+        @media (max-width: 768px) {
+            width: 56%;
+        }
+    }
+}
+
 #about_detail{
     padding-top: 0;
 

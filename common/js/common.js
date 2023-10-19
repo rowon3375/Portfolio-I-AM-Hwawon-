@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 /************************
  * 
- * fadeUP
+ * fadeUP　+ progress-bar
  * 
 ************************/
 $(document).ready(function() {
@@ -129,22 +129,17 @@ $(document).ready(function() {
       if (scrollPos + windowHeight > elementOffset) {
         // 要素が画面内に入ったらアニメーションを追加
         $(this).addClass(animationClass);
+
+        // 要素にfadeUp_showクラスが追加されたら、その中にある.progress-barの幅を設定
+        if ($(this).hasClass(animationClass)) {
+          $(this).find('.progress-bar').each(function() {
+            var valuenow = $(this).attr('aria-valuenow');
+            $(this).css('width', valuenow + '%');
+          });
+        }
       }
     });
   });
-});
-
-/************************
- * 
- * skill bar
- * 
-************************/
-$(document).ready(function() {
-  $('.progress-bar').css("width",
-            function() {
-                return $(this).attr("aria-valuenow") + "%";
-            }
-    )
 });
 
 

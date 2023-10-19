@@ -165,7 +165,7 @@ body {
 }
 @media (max-width: 768px) {
   #one_work_detail .flex.flex-between {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
 }
 #one_work_detail .flex.flex-between > figure {
@@ -410,7 +410,7 @@ body {
 }
 @media (max-width: 768px) {
   #one_work_detail .other_point {
-    margin-top: 24px;
+    margin-top: 40px;
   }
 }
 #one_work_detail .work_img.flex.flex-between {
@@ -424,8 +424,8 @@ body {
 }
 @media (max-width: 768px) {
   #one_work_detail .work_img.flex.flex-between {
-    margin-top: 40px;
-    gap: 25px;
+    margin-top: 60px;
+    gap: 40px;
   }
 }
 #one_work_detail .work_img.flex.flex-between .en {
@@ -438,6 +438,11 @@ body {
   display: inline-block;
   padding: 0px 16px;
   line-height: 1.4;
+}
+@media (max-width: 768px) {
+  #one_work_detail .work_img.flex.flex-between .en {
+    margin-bottom: 16px;
+  }
 }
 #one_work_detail .work_img.flex.flex-between figure {
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.15);

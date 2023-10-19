@@ -844,6 +844,7 @@ header{
     transition: .4s all ease;
     z-index: 1000;
     background: $color_white;
+    mix-blend-mode: multiply;
 
     @media (max-width: 768px) {
         width: 48px;
@@ -900,16 +901,18 @@ header{
         }
     }
 
-    &:hover{
-        opacity: 1;
-
-        a:before{
-            border-color: $color_white;
-        }
-
-        a:after{
-            transform: translate(-50%, -50%) scale(1.1, 1.1);
-        }
+    @media (hover:hover) {
+        &:hover{
+            opacity: 1;
+    
+            a:before{
+                border-color: $color_white;
+            }
+    
+            a:after{
+                transform: translate(-50%, -50%) scale(1.1, 1.1);
+            }
+        }   
     }
 }
 

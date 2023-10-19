@@ -3,6 +3,12 @@
 //                     about
 //
 ********************************************************/
+@media (max-width: 768px) {
+  .detail_title > h2:after {
+    width: 56%;
+  }
+}
+
 #about_detail {
   padding-top: 0;
 }
