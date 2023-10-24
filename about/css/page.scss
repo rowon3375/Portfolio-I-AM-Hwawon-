@@ -24,6 +24,19 @@ $font_roboto: 'Roboto', sans-serif;
 #about_detail{
     padding-top: 0;
 
+    //セクションタイトル
+    h3.en{
+        font-size: 2.4rem;
+        font-weight: bold;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+
     //タグ
     ul.flex{
         flex-wrap: wrap;
@@ -79,7 +92,7 @@ $font_roboto: 'Roboto', sans-serif;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: .05em;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
 
             @media (max-width: 556px) {
                 letter-spacing: 0;
@@ -101,6 +114,87 @@ $font_roboto: 'Roboto', sans-serif;
         }
     }
 
+    //長所・性格
+    .character{
+        margin-bottom: 80px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        .pros{
+            .pros_list{
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                h3.en{
+                    margin-bottom: 24px;
+                }
+
+                dl{
+                    margin-bottom: 30px;
+                    width: 46%;
+
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+
+                dt{
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    margin-bottom: 14px;
+
+                    @media (max-width: 768px) {
+                        font-size: 1.6rem;
+                    }
+
+                    >span{
+                        position: relative;
+                        padding-left: 30px;
+
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            background: url(/common/img/icon_blackstar.png) no-repeat;
+                            background-size: contain;
+                            width: 20px;
+                            height: 20px;
+                            left: 0;
+                            top: 4px;
+                        }
+                    }
+                }
+
+                li{
+                    font-size: 1.6rem;
+                    position: relative;
+                    padding-left: 26px;
+                    margin-bottom: 8px;
+
+                    @media (max-width: 768px) {
+                        font-size: 1.4rem;
+                    }
+
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        background: $color_main;
+                        width: 12px;
+                        height: 2px;
+                        left: 0;
+                        top: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    //プロファイル
     .porfile{
         flex-direction: row;
         align-items: center;
@@ -116,18 +210,6 @@ $font_roboto: 'Roboto', sans-serif;
 
             @media (max-width: 556px) {
                 width: 100%;
-            }
-        }
-
-        h3{
-            font-size: 2.4rem;
-            font-weight: bold;
-            letter-spacing: .05em;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-
-            @media (max-width: 768px) {
-                font-size: 2rem;
             }
         }
 

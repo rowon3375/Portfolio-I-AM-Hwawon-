@@ -375,10 +375,12 @@ header .nav_list li a:before {
 header .nav_list li a:after {
   bottom: 0;
 }
-header .nav_list li a:hover:before, header .nav_list li a:hover:after {
-  transform: translate(-50%, 0);
-  width: 100%;
-  transition: width 0.6s ease-in-out, transform 0.4s ease-in-out;
+@media (hover: hover) {
+  header .nav_list li a:hover:before, header .nav_list li a:hover:after {
+    transform: translate(-50%, 0);
+    width: 100%;
+    transition: width 0.6s ease-in-out, transform 0.4s ease-in-out;
+  }
 }
 header .nav_list li:last-child {
   margin-bottom: 0;

@@ -10,7 +10,7 @@
             <p class="roboto">@tel <a href="tel:08091045163" target="_blank">080-9104-5163</a></p>
             <p class="roboto">@git <a href="https://github.com/rowon3375" target="_blank">rowon3375</a></p>
             <p class="roboto">made by hwawon.park</p>
-            <p class="roboto">update: <span>2023.10.19</span></p>
+            <p class="roboto">update: <span>2023.10.24</span></p>
         </div>
     </div>
 </footer>

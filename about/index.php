@@ -28,9 +28,9 @@ $title = "About | I Am Hwawon";
                 <div class="intro">
                     <h3>" 過去の自分に<br class="sp-only2">借りを作らないように！ "</h3>
 
-                    <p>はじめまして！<br>私は韓国から来た、朴 和元（パク ファウォン）と申します。<br>
-                    やりたいことのためなら恐れず挑戦して、早く慣れるように努力するのが一番の強みです。<br>
-                    そして、過去に頑張った自分に借りを作らないように今やることに全力を尽くすために頑張っています。</p>
+                    <p>はじめまして！<br>私は韓国から来た、朴 和元（パク ファウォン）と申します。</p>
+                    <p>やりたいことのためなら恐れず挑戦して、早く慣れるように努力するのが一番の強みです。<br>
+                    そして、過去に頑張った自分に借りを作らないように<br class="pc-only1">今やることに全力を尽くしています。</p>
 
                     <p>2022年からIT業界に興味を持ち勉強を始め、<span class="import_line_before">2023年からサイト制作の仕事</span>に取り組んでいます。<br>
                     <span class="import_line_before">バックエンドとフロントエンド・デザインに関心</span>があり、現在はPHPとLaravelの勉強と一緒に<br class="pc-only1">PhotoShop・XD・Figmaの勉強をしています。</p>
@@ -40,7 +40,30 @@ $title = "About | I Am Hwawon";
 
                 <div class="character">
                     <div class="pros">
-                        
+                        <h3 class="en">advantages</h3>
+
+                        <div class="pros_list flex flex-between">
+                            <dl>
+                                <dt><span>コミュニケーション</span></dt>
+                                <dd>
+                                    <ul>
+                                        <li>人と話す時は目を合わせて話に集中する</li>
+                                        <li>周りの同僚が忙しそうな時は、まず助けになろうとする</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+
+                            <dl>
+                                <dt><span>自己主導的</span></dt>
+                                <dd>
+                                    <ul>
+                                        <li>自分に必要な部分を把握して学習しようとする</li>
+                                        <li>分からないことがあったら先に検索で情報を取る</li>
+                                        <li>足りない部分があったら迷わず質問して解決する</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
                     </div>
                 </div>
 
@@ -69,6 +92,10 @@ $title = "About | I Am Hwawon";
                             <dd>OPIc 日本語 AL(Advanced Low) 取得</dd>
                         </dl>
                     </div>
+                </div>
+
+                <div class="challenge">
+                    
                 </div>
             </div>
         </div>

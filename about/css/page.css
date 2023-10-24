@@ -12,6 +12,18 @@
 #about_detail {
   padding-top: 0;
 }
+#about_detail h3.en {
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  #about_detail h3.en {
+    font-size: 2rem;
+  }
+}
 #about_detail ul.flex {
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -66,7 +78,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 @media (max-width: 556px) {
   #about_detail .intro > h3 {
@@ -86,6 +98,77 @@
 #about_detail .intro > p:last-child {
   margin-bottom: 0;
 }
+#about_detail .character {
+  margin-bottom: 80px;
+}
+@media (max-width: 768px) {
+  #about_detail .character {
+    margin-bottom: 40px;
+  }
+}
+#about_detail .character .pros .pros_list {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#about_detail .character .pros .pros_list h3.en {
+  margin-bottom: 24px;
+}
+#about_detail .character .pros .pros_list dl {
+  margin-bottom: 30px;
+  width: 46%;
+}
+@media (max-width: 768px) {
+  #about_detail .character .pros .pros_list dl {
+    width: 100%;
+  }
+}
+#about_detail .character .pros .pros_list dl:last-child {
+  margin-bottom: 0;
+}
+#about_detail .character .pros .pros_list dt {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+@media (max-width: 768px) {
+  #about_detail .character .pros .pros_list dt {
+    font-size: 1.6rem;
+  }
+}
+#about_detail .character .pros .pros_list dt > span {
+  position: relative;
+  padding-left: 30px;
+}
+#about_detail .character .pros .pros_list dt > span:before {
+  content: "";
+  position: absolute;
+  background: url(/common/img/icon_blackstar.png) no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 4px;
+}
+#about_detail .character .pros .pros_list li {
+  font-size: 1.6rem;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  #about_detail .character .pros .pros_list li {
+    font-size: 1.4rem;
+  }
+}
+#about_detail .character .pros .pros_list li:before {
+  content: "";
+  position: absolute;
+  background: #000000;
+  width: 12px;
+  height: 2px;
+  left: 0;
+  top: 14px;
+}
 #about_detail .porfile {
   flex-direction: row;
   align-items: center;
@@ -103,18 +186,6 @@
 @media (max-width: 556px) {
   #about_detail .porfile .porfile_content {
     width: 100%;
-  }
-}
-#about_detail .porfile h3 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-@media (max-width: 768px) {
-  #about_detail .porfile h3 {
-    font-size: 2rem;
   }
 }
 #about_detail .porfile dl {
