@@ -38,7 +38,7 @@ $title = "About | I Am Hwawon";
                     <p>目標にしていることは一人でデザインからシステムまでやり遂げる<span class="import_color">オールラウンダー</span>になることを目指しています。</p>
                 </div>
 
-                <div class="character">
+                <div class="character fadeUp">
                     <div class="pros">
                         <h3 class="en">advantages</h3>
 
