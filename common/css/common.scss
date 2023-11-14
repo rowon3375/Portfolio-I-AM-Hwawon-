@@ -567,14 +567,17 @@ header{
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
    }
 
-   &:hover{
-    transform: translate(0, 5px);
-
-    &:before{
-        box-shadow: 0 0 0 2px $color_main, 0 0 $color_main;
-        transform: translate3d(0, 0, -16px);
-    }
+   @media (hover:hover) {
+    &:hover{
+        transform: translate(0, 5px);
+    
+        &:before{
+            box-shadow: 0 0 0 2px $color_main, 0 0 $color_main;
+            transform: translate3d(0, 0, -16px);
+        }
+       }
    }
+   
 
    a, input[type=submit]{
     display: flex;
