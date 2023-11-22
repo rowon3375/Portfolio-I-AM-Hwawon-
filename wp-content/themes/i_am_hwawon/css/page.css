@@ -58,9 +58,11 @@ body {
   width: 100%;
   padding: 2px 12px;
 }
-#work_detail .work_cate li a:hover {
-  background: #000000;
-  color: #fff;
+@media (hover: hover) {
+  #work_detail .work_cate li a:hover {
+    background: #000000;
+    color: #fff;
+  }
 }
 @media (max-width: 768px) {
   #work_detail .work_cate li a {
@@ -248,9 +250,11 @@ body {
   right: 0;
   top: 10px;
 }
-#one_work_detail .one_work_detail_content a:hover:before {
-  --d: 100%;
-  transition: 0.4s all ease;
+@media (hover: hover) {
+  #one_work_detail .one_work_detail_content a:hover:before {
+    --d: 100%;
+    transition: 0.4s all ease;
+  }
 }
 #one_work_detail .one_work_detail_content dl {
   display: flex;
@@ -478,6 +482,7 @@ body {
 @media (max-width: 556px) {
   #one_work_detail .work_img.flex.flex-between .pc_img figure {
     max-width: 370px;
+    margin: 0 auto;
   }
 }
 #one_work_detail .work_img.flex.flex-between .sp_img figure {
@@ -486,6 +491,7 @@ body {
 @media (max-width: 556px) {
   #one_work_detail .work_img.flex.flex-between .sp_img figure {
     max-width: 370px;
+    margin: 0 auto;
   }
 }
 
@@ -640,9 +646,18 @@ body {
   background: #000000;
   color: #fff;
 }
-.pager .page-numbers:hover {
-  background: #000000;
-  color: #fff;
+.pager .page-numbers.dots {
+  cursor: default;
+}
+.pager .page-numbers.dots:hover {
+  background: #fff;
+  color: #000000;
+}
+@media (hover: hover) {
+  .pager .page-numbers:hover {
+    background: #000000;
+    color: #fff;
+  }
 }
 .pager .next, .pager .prev {
   position: relative;
@@ -663,9 +678,11 @@ body {
     top: 15px;
   }
 }
-.pager .next:hover:before, .pager .prev:hover:before {
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
+@media (hover: hover) {
+  .pager .next:hover:before, .pager .prev:hover:before {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
 }
 .pager .next:before {
   right: 18px;

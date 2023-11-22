@@ -69,9 +69,11 @@ body{
             width: 100%;
             padding: 2px 12px;
 
-            &:hover{
-                background: $color_main;
-                color: #fff;
+            @media (hover:hover) {
+                &:hover{
+                    background: $color_main;
+                    color: #fff;
+                }   
             }
 
             @media (max-width: 768px) {
@@ -270,12 +272,13 @@ body{
                 right: 0;
                 top: 10px;
             }
-    
-            &:hover{
-                &:before{
-                    --d: 100%;
-                    transition: 0.4s all ease;
-                }
+            @media (hover:hover) {
+                &:hover{
+                    &:before{
+                        --d: 100%;
+                        transition: 0.4s all ease;
+                    }
+                }   
             }
         }
 
@@ -524,6 +527,7 @@ body{
 
                 @media (max-width: 556px) {
                     max-width: 370px;
+                    margin: 0 auto;
                 }
             }
         }
@@ -534,6 +538,7 @@ body{
 
                 @media (max-width: 556px) {
                     max-width: 370px;
+                    margin: 0 auto;
                 }
             }
         }
@@ -698,9 +703,20 @@ body{
             color: #fff;
         }
 
-        &:hover{
-            background: $color_main;
-            color: #fff;
+        &.dots{
+            cursor: default;
+
+            &:hover{
+                background: #fff;
+                color: #000000;
+            }
+        }
+
+        @media (hover:hover) {
+            &:hover{
+                background: $color_main;
+                color: #fff;
+            }   
         }
     }
 
@@ -723,11 +739,13 @@ body{
             }
         }
 
-        &:hover{
-            &:before{
-                border-top: 2px solid #fff;
-                border-right: 2px solid #fff;
-            }
+        @media (hover:hover) {
+            &:hover{
+                &:before{
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+            }   
         }
     }
 
