@@ -172,7 +172,7 @@ body{
         }
     }
 
-    .flex.flex-between{
+    .main_detail{
         align-items: flex-start;
         gap: 36px;
         margin-bottom: 60px;
@@ -453,6 +453,35 @@ body{
 
         @media (max-width: 768px) {
             margin-top: 40px;
+        }
+    }
+
+    .other_img{
+        margin-top: 60px;
+
+        @media (max-width: 768px) {
+            margin-top: 40px;
+        }
+
+        &.one_img{
+            figure{
+                max-width: 500px;
+            }
+        }
+
+        &.flex{
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            gap: 20px;
+
+            figure{
+                width: 48%;
+                display: inline-block;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
         }
     }
 

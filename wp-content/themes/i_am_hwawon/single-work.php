@@ -7,7 +7,7 @@
         <div class="container">
             <h3 class="site_name"><?php the_title(); ?></h3>
             
-            <div class="flex flex-between">
+            <div class="main_detail flex flex-between">
                 <div class="one_work_detail_content">
                     <dl>
                         <dt>サイトURL</dt>
@@ -84,6 +84,27 @@
             </dl>
             <?php endif; ?>
 
+            <?php if(!empty(get_field('other_img')) || !empty(get_field('other_img02'))) : ?>
+            <?php if(empty(get_field('other_img02'))) : ?>
+                <div class="other_img one_img fadeUp">
+            <?php else : ?>
+                <div class="other_img flex flex-between fadeUp">
+            <?php endif; ?>
+
+                <?php if(!empty(get_field('other_img'))) : ?>
+                    <figure>
+                        <img src="<?php the_field('other_img'); ?>" alt="<?php the_field('img_alt'); ?>">
+                    </figure>
+                <?php endif; ?>
+
+                <?php if(!empty(get_field('other_img02'))) : ?>
+                    <figure>
+                        <img src="<?php the_field('other_img02'); ?>" alt="<?php the_field('img_alt02'); ?>">
+                    </figure>
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
             <div class="work_img flex flex-between fadeUp">
                 <?php if(!empty(get_field('pc_img'))) : ?>
                 <div class="pc_img">
@@ -103,22 +124,6 @@
                 </div>
                 <?php endif; ?>
             </div>
-
-            <?php if(!empty(get_field('other_img')) || !empty(get_field('other_img02'))) : ?>
-            <div class="other_img fadeUp">
-                <?php if(!empty(get_field('other_img'))) : ?>
-                    <figure>
-                        <img src="<?php the_field('other_img'); ?>" alt="<?php the_field('img_alt'); ?>">
-                    </figure>
-                <?php endif; ?>
-
-                <?php if(!empty(get_field('other_img02'))) : ?>
-                    <figure>
-                        <img src="<?php the_field('other_img02'); ?>" alt="<?php the_field('img_alt02'); ?>">
-                    </figure>
-                <?php endif; ?>
-            </div>
-            <?php endif; ?>
 
             <div class="work_page flex flex-between">
                 <?php if (get_previous_post()):?>
