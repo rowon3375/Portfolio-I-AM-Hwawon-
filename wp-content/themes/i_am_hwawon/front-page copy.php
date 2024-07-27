@@ -193,6 +193,43 @@ $title = "I Am Hwawon | Portfolio";
                 </div>
             </div>
         </section>
+
+        <!-- contact -->
+        <section id="contact" class="sec_padding fadeUp">
+            <div class="container">
+                <div class="sec_title">
+                    <h2>contact</h2>
+                </div>
+
+                <div class="contact_form">
+                    <form action="/contact/mail.php" method="POST">
+                        <dl>
+                            <dt>name<span>*</span></dt>
+                            <dd><input type="text" name="name" value="" placeholder="park hwa won" class="rq js-characters-change"></dd>
+                        </dl>
+
+                        <dl>
+                            <dt>tel<span>*</span></dt>
+                            <dd><input type="tel" name="tel" value="" placeholder="080-1234-5678" class="rq js-characters-change"></dd>
+                        </dl>
+
+                        <dl>
+                            <dt>email<span>*</span></dt>
+                            <dd><input type="email" name="email" value="" placeholder="yourEmail@gamil.com" class="rq js-characters-change"></dd>
+                        </dl>
+
+                        <dl>
+                            <dt>message<span>*</span></dt>
+                            <dd><textarea name="message" cols="30" rows="10" value="" placeholder="contact message" class="rq js-characters-change"></textarea></dd>
+                        </dl>
+
+                        <div class="btn">
+                            <input type="submit" value="contact">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- footer -->

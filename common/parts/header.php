@@ -19,7 +19,7 @@
                             <li><a href="/work">work</a></li>
                             <li><a href="/skill">skill</a></li>
                             <li><a href="/about">about</a></li>
-                            <li><a href="/contact">contact</a></li>
+                            <!-- <li><a href="/contact">contact</a></li> -->
                         </ul>
                     </div>
                 </div>
