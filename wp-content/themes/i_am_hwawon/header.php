@@ -22,9 +22,7 @@
     <!-- css -->
     <link rel="stylesheet" href="/common/css/html-5-reset-stylesheet.css">
     <link rel="stylesheet" href="/common/css/common.css">
-    <?php if(strpos($url, "work") !== false) : ?>
-        <link rel="stylesheet" href="/wp-content/themes/i_am_hwawon/css/page.css">
-    <?php endif; ?>
+    <link rel="stylesheet" href="/css/page.css">
     <!-- script -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>	
     <!-- font -->
@@ -34,5 +32,32 @@
 </head>
 
 <body>
-    <!-- header -->
-    <?php include('/ilove4622/www/common/parts/header.php'); ?>
+    <header>
+    <div class="container flex">
+        <a href="/" class="logo">
+            <span>park</span>
+        </a>
+
+        <div class="menu_list">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav_menu">
+                <div class="nav_content">
+                    <div class="flex">
+                        <ul class="nav_list">
+                            <li><a href="/">top</a></li>
+                            <li><a href="/work">work</a></li>
+                            <li><a href="/skill">skill</a></li>
+                            <li><a href="/about">about</a></li>
+                            <li><a href="/contact">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    </header>
