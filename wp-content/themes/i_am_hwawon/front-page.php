@@ -186,7 +186,7 @@
         </section>
 
         <!-- contact -->
-        <section id="contact" class="sec_padding fadeUp">
+        <!-- <section id="contact" class="sec_padding fadeUp">
             <div class="container">
                 <div class="sec_title">
                     <h2>contact</h2>
@@ -220,6 +220,6 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 <?php get_footer(); ?>
