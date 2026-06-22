@@ -1,225 +1,213 @@
 <?php get_header(); ?>
-    <main>
-        <!-- mv -->
-        <section id="mv" class="sec_padding sticky">
-            <div class="container">
-                <p class="main_copy en">i am <br>hwawon</p>
-                <h1>portfolio</h1>
-            </div>
-        </section>
+<main>
+  <!-- mv -->
+  <section id="mv" class="sec_padding sticky">
+    <div class="container">
+      <p class="main_copy en">i am <br>hwawon</p>
+      <h1>portfolio</h1>
+    </div>
+  </section>
 
-        <!-- work -->
-        <section id="work" class="sec_padding fadeUp">
-            <div class="container">
-                <div class="sec_title">
-                    <h2>work</h2>
-                </div>
+  <!-- work -->
+  <section id="work" class="sec_padding fadeUp">
+    <div class="container">
+      <div class="sec_title">
+        <h2>work</h2>
+      </div>
 
-                <div class="work_content">
-                    <div class="work_list flex">
-                    <?php
-                    //work/work_cate/top表示
-                        $args = array(
-                            'post_type' => 'work',
-                            'posts_per_page' => 6,
-                            'post_status' => 'publish',
-                            'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'work_cate',
-                                    'field' => 'slug',
-                                    'terms' => 'top',
-                                )
-                            )
-                        ); 
-                        $work = new WP_Query($args);
-                    ?>
-                        <?php if ($work->have_posts()) : while ($work->have_posts()) : $work->the_post(); ?>
-                            <div class="one_work">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                    <figure>
-                                        <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
-                                    </figure>
+      <div class="work_content">
+        <div class="work_wrap">
+          <h3 class="work_sub">coding</h3>
+          <ul class="work_list coding_list flex">
+            <?php
+            $args = array(
+              'post_type' => 'work',
+              'post_status' => 'publish',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'work_cate',
+                  'field'    => 'slug',
+                  'terms'    => 'coding',
+                )
+              )
+            );
 
-                                    <div class="work_detail">
-                                        <h3 class="title"><?php the_title(); ?></h3>
+            $work = new WP_Query($args);
 
+            if ($work->have_posts()) :
+              while ($work->have_posts()) : $work->the_post();
+            ?>
+              <li class="one_work">
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                  <figure>
+                    <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
+                  </figure>
 
-                                        <div class="work_detail_content">
-                                            <p class="work_detail_title">環境</p>
+                  <div class="work_detail">
+                    <h3 class="title"><?php the_title(); ?></h3>
 
-                                            <ul class="envi">
-                                                <?php
-                                                foreach(get_field('envi') as $envi){
-                                                    echo '<li>';
-                                                    if(is_array($envi)){
-                                                        //bothの場合、ラベルを出力
-                                                        echo $envi['label'];
-                                                    }else{
-                                                        //単独の返り値の場合の出力
-                                                        echo $envi;
-                                                    }
-                                                    echo '</li>';
-                                                }
-                                                ?>
-                                            </ul>
-                                        </div>
+                    <div class="work_detail_content">
+                      <p class="work_detail_title">環境</p>
 
-                                        <div class="work_detail_content">
-                                            <p class="work_detail_title">期間</p>
-                                            <p><?php the_field('term'); ?></p>
-                                        </div>
-
-                                        <div class="explan">
-                                            <p><?php the_field('top_explain'); ?></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php endwhile; endif; ?>
-                        <?php wp_reset_postdata(); ?>
-                </div>
-                
-
-                    <div class="btn">
-                        <a href="/work/">detail</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- skill -->
-        <section id="skill" class="sec_padding flex flex-between">
-            <div class="sec_title">
-                <h2>skill</h2>
-            </div>
-
-            <div class="container">
-                <div class="fadeUp">
-                    <div class="skill_content">
-                        <div class="skill_box">
-                            <p class="mini_title en">front-end</p>
-
-                            <ul class="flex">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>WordPress</li>
-                                <li>Jquery</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-
-                        <div class="skill_box">
-                            <p class="mini_title en">back-end</p>
-
-                            <div class="back_skill">
-
-                            <div class="one_box">
-                                <p class="en">- language/framework</p>
-
-                                <ul class="flex">
-                                    <li>PHP</li>
-                                    <li>Laravel</li>
-                                </ul>
-                            </div>
-                            <div class="one_box">
-                                <p class="en">- database</p>
-
-                                <ul class="flex">
-                                    <li>MySQL</li>
-                                    <li>MariaDB</li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="skill_box">
-                            <p class="mini_title en">software</p>
-
-                            <ul class="flex">
-                                <li>VS-Code</li>
-                                <li>GitLab</li>
-                                <li>SourceTree</li>
-                            </ul>
-                        </div>
+                      <ul class="envi">
+                        <?php
+                        if (get_field('envi')) {
+                          foreach (get_field('envi') as $envi) {
+                            echo '<li>';
+                            echo is_array($envi) ? $envi['label'] : $envi;
+                            echo '</li>';
+                          }
+                        }
+                        ?>
+                      </ul>
                     </div>
 
-                    <div class="btn">
-                        <a href="/skill/">detail</a>
+                    <div class="explan">
+                      <p><?php the_field('outline'); ?></p>
                     </div>
-                </div>
-            </div>
-        </section>
+                  </div>
+                </a>
+              </li>
+            <?php
+              endwhile;
+              wp_reset_postdata();
+            endif;
+            ?>
+          </ul>
+        </div>
+        <div class="work_wrap">
+          <h3 class="work_sub">design</h3>
+          <ul class="work_list design_list flex">
+            <?php
+            $args = array(
+              'post_type' => 'work',
+              'post_status' => 'publish',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'work_cate',
+                  'field'    => 'slug',
+                  'terms'    => 'design',
+                )
+              )
+            );
 
-        <!-- about -->
-        <section id="about" class="sec_padding flex flex-between">
-            <div class="sec_title">
-                <h2>about</h2>
-            </div>
+            $work = new WP_Query($args);
 
-            <div class="container">
-                <div class="about_content fadeUp">
-                    <ul class="flex">
-                        <!-- 挑戦・可能性・努力・経験・粘り -->
-                        <li>challenge</li>
-                        <li>possibility</li>
-                        <li>effort</li>
-                        <li>experience</li>
-                    </ul>
-                    
-                    <div class="about_text">
-                        <p>初めまして！<br>私は韓国から来た、朴 和元(パク ファウォン)と申します。</p>
+            if ($work->have_posts()) :
+              while ($work->have_posts()) : $work->the_post();
+            ?>
+              <li class="one_work">
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                  <figure>
+                    <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
+                  </figure>
 
-                        <p>やりたいことのためなら恐れず挑戦して、<br class="pc-only1">早く慣れるように努力する強みを持って成長し続ける<br>
-                        <span class="import_color">オールラウンダー</span>を目指して経験を積み重ねています！</p>
+                  <div class="work_detail">
+                    <h3 class="title"><?php the_title(); ?></h3>
 
-                        <p>未経験から初め、<span class="import_line_before">HTML・CSS・WordPress・PHP</span>など色な言語を携わっています。<br>
-                        <span class="import_line_before">バックエンドとフロントエンド・デザインに関心</span>があり、<br class="pc-only1">
-                        現在は<span class="import_line_before">PHPとLaravelの勉強と一緒にPhotoShop・XD・Figmaの勉強</span>をしています。</p>
-                        </p>
+                    <div class="work_detail_content">
+                      <p class="work_detail_title">環境</p>
+
+                      <ul class="envi">
+                        <?php
+                        if (get_field('envi')) {
+                          foreach (get_field('envi') as $envi) {
+                            echo '<li>';
+                            echo is_array($envi) ? $envi['label'] : $envi;
+                            echo '</li>';
+                          }
+                        }
+                        ?>
+                      </ul>
                     </div>
 
-                    <div class="btn">
-                        <a href="about">about me</a>
+                    <div class="explan">
+                      <p><?php the_field('outline'); ?></p>
                     </div>
-                </div>
-            </div>
-        </section>
+                  </div>
+                </a>
+              </li>
+            <?php
+              endwhile;
+              wp_reset_postdata();
+            endif;
+            ?>
+          </ul>
+        </div>
+</div>
+    </div>
+  </section>
 
-        <!-- contact -->
-        <!-- <section id="contact" class="sec_padding fadeUp">
-            <div class="container">
-                <div class="sec_title">
-                    <h2>contact</h2>
-                </div>
+  <!-- skill -->
+  <section id="skill" class="sec_padding flex flex-between">
+    <div class="sec_title">
+      <h2>skill</h2>
+    </div>
 
-                <div class="contact_form">
-                    <form action="/contact/mail.php" method="POST">
-                        <dl>
-                            <dt>name<span>*</span></dt>
-                            <dd><input type="text" name="name" value="" placeholder="park hwa won" class="rq js-characters-change"></dd>
-                        </dl>
+    <div class="container">
+      <div class="fadeUp">
+        <div class="skill_content">
+          <div class="skill_box">
+            <p class="mini_title en">tech stack</p>
 
-                        <dl>
-                            <dt>tel<span>*</span></dt>
-                            <dd><input type="tel" name="tel" value="" placeholder="080-1234-5678" class="rq js-characters-change"></dd>
-                        </dl>
+            <ul class="flex">
+              <li>HTML5</li>
+              <li>CSS/SCSS</li>
+              <li>Jquery</li>
+              <li>JavaScript</li>
+              <li>WordPress</li>
+              <li>PHP</li>
+              <li>MySQL(MariaDB)</li>
+            </ul>
+          </div>
 
-                        <dl>
-                            <dt>email<span>*</span></dt>
-                            <dd><input type="email" name="email" value="" placeholder="yourEmail@gamil.com" class="rq js-characters-change"></dd>
-                        </dl>
+          <div class="skill_box">
+            <p class="mini_title en">tools</p>
 
-                        <dl>
-                            <dt>message<span>*</span></dt>
-                            <dd><textarea name="message" cols="30" rows="10" value="" placeholder="contact message" class="rq js-characters-change"></textarea></dd>
-                        </dl>
+            <ul class="flex">
+              <li>VS-Code</li>
+              <li>Git/GitHub</li>
+              <li>Git/GitHub</li>
+              <li>SourceTree</li>
+              <li>Figma</li>
+              <li>Photoshop</li>
+              <li>XD</li>          
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                        <div class="btn">
-                            <input type="submit" value="contact">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section> -->
-    </main>
+  <!-- about -->
+  <section id="about" class="sec_padding flex flex-between">
+    <div class="sec_title">
+      <h2>about</h2>
+    </div>
+
+    <div class="container">
+      <div class="about_content fadeUp">
+        <ul class="flex">
+          <!-- 挑戦・可能性・努力・経験・粘り -->
+          <li>challenge</li>
+          <li>possibility</li>
+          <li>effort</li>
+          <li>experience</li>
+        </ul>
+
+        <div class="about_text">
+          <p>
+            はじめまして！<br>「学び」と「挑戦」を価値に変えるWebコーダー、朴 和元（パク・ファウォン）です。
+          </p>
+          <p>
+            <span class="import_color">Webコーダー</span>として4年間、コーポレートサイトやLP、コラムサイトなど、さまざまなWebサイト制作に携わってきました。<br>WordPressのオリジナルテーマ開発や運用をはじめ、コーディングを中心に、バナー制作やページ構成の作成などにも携わっています。
+          </p>
+          <p>
+            また、任された仕事には責任を持って向き合い、自分の役割の中で価値を生み出すことを意識しています。<br>技術だけでなく、<span class="import_color">ビジネスの成果にも貢献</span>できるWebコーダーを目指しています。
+          </p>          
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 <?php get_footer(); ?>

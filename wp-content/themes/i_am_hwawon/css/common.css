@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2? family= Noto+Sans+JP:wght@500;700;800;900 & family= Open+Sans:wght@500;600; 700;800 & family= Roboto:wght@500;700;900 & display=swap");
 * {
   box-sizing: border-box;
 }
@@ -14,6 +13,7 @@ body {
   font-size: 16px;
   color: #000000;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 body.active {
@@ -31,7 +31,8 @@ main {
   }
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   text-decoration: none;
 }
@@ -52,43 +53,12 @@ img {
   image-rendering: auto;
 }
 
-input[type=submit], button {
+button {
   background: none;
   border: none;
   cursor: pointer;
   font-family: "Open Sans", sans-serif;
   line-height: 1.8;
-}
-
-input[type=text], input[type=tel], input[type=email], textarea {
-  line-height: 1.8;
-}
-
-/********************************************************
-//
-//                      iOS reset
-//
-********************************************************/
-input[type=submit],
-input[type=button] {
-  border-radius: 0;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-       appearance: button;
-  border: none;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-input[type=submit]:-webkit-search-decoration,
-input[type=button]:-webkit-search-decoration {
-  display: none;
-}
-
-input[type=submit]:focus,
-input[type=button]:focus {
-  outline-offset: -2px;
 }
 
 /********************************************************
@@ -210,7 +180,7 @@ input[type=button]:focus {
 }
 
 .sec_padding.flex .container {
-  width: 60%;
+  width: 54%;
 }
 @media (max-width: 768px) {
   .sec_padding.flex .container {
@@ -422,7 +392,7 @@ header .nav_menu.active .nav_list li:nth-child(6) {
   position: sticky;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 35%;
   margin: auto 0;
 }
 @media (max-width: 768px) {
@@ -543,7 +513,8 @@ header .nav_menu.active .nav_list li:nth-child(6) {
     transform: translate3d(0, 0, -16px);
   }
 }
-.btn a, .btn input[type=submit] {
+.btn a,
+.btn input[type=submit] {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -602,7 +573,7 @@ header .nav_menu.active .nav_list li:nth-child(6) {
 }
 .one_work figure {
   width: 100%;
-  height: auto;
+  height: 215px;
   overflow: hidden;
   transition: 0.4s all ease;
 }
@@ -656,7 +627,7 @@ header .nav_menu.active .nav_list li:nth-child(6) {
 .one_work .work_detail a:after {
   content: "";
   position: absolute;
-  background: url(/common/img/icon_othersite.svg) no-repeat;
+  background: url(../img/icon_othersite.svg) no-repeat;
   background-size: contain;
   width: 12px;
   height: 12px;
@@ -914,4 +885,4 @@ footer p:last-child {
 footer p span {
   display: inline-block;
   margin-left: 4px;
-}/*# sourceMappingURL=common.css.map */
+}

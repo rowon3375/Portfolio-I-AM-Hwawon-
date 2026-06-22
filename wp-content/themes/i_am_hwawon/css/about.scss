@@ -4,15 +4,10 @@ $color_main: #000000;
 $color_sub: #333333;
 $color_white: #fff;
 
-$font_main: 'Noto Sans JP', sans-serif;;
+$font_main: 'Noto Sans JP', sans-serif;
 $font_en: 'Open Sans', sans-serif;
 $font_roboto: 'Roboto', sans-serif;
 
-/********************************************************
-//
-//                     about
-//
-********************************************************/
 .detail_title{
     >h2:after{
         @media (max-width: 768px) {
@@ -160,7 +155,7 @@ $font_roboto: 'Roboto', sans-serif;
                         &:before{
                             content: "";
                             position: absolute;
-                            background: url(/common/img/icon_blackstar.png) no-repeat;
+                            background: url(../img/icon_blackstar.png) no-repeat;
                             background-size: contain;
                             width: 20px;
                             height: 20px;

@@ -1,8 +1,3 @@
-/********************************************************
-//
-//                     skill
-//
-********************************************************/
 #skill_detail {
   padding-top: 0;
 }
@@ -209,4 +204,4 @@
 
 .fadeUp_show .progress-bar {
   transition: width 3s ease;
-}/*# sourceMappingURL=page.css.map */
+}
