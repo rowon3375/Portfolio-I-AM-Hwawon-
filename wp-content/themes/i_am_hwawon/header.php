@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php if(is_front_page()): ?>
-    <title><?php the_title(); ?> | I Am Hwawon</title> 
-  <?php else: ?>
-    <title>I Am Hwawon | ポートフォリオ</title> 
-  <?php endif; ?>
+  <title>I Am Hwawon | ポートフォリオ</title> 
   <meta property="og:url" content="<?php echo home_url(); ?>">
   <meta property="og:type" content="website">
   <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/ogp.png">
